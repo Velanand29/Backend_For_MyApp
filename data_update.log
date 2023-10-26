@@ -1,0 +1,39 @@
+2023-10-25 22:47:21,712 - Data appended to the database.
+2023-10-25 22:50:02,876 - Data appended to the database.
+2023-10-25 22:57:25,135 - Data appended to the database.
+2023-10-25 22:59:27,627 - Data appended to the database.
+2023-10-25 23:02:13,729 - Data updated in the database.
+2023-10-25 23:16:11,904 - Error while updating the database: (pymysql.err.ProgrammingError) (1146, "Table 'fno_data.options_data' doesn't exist")
+[SQL: SELECT * FROM options_data]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2023-10-25 23:16:39,711 - Error while updating the database: (pymysql.err.ProgrammingError) (1146, "Table 'fno_data.options_data' doesn't exist")
+[SQL: SELECT * FROM options_data]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2023-10-25 23:19:17,911 - Data updated in the database.
+2023-10-25 23:24:49,740 - Data updated in the database.
+2023-10-25 23:36:34,237 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:36:39,244 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo26Jan2023bhav.csv'
+2023-10-25 23:39:10,305 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:39:15,318 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo07Mar2023bhav.csv'
+2023-10-25 23:39:42,388 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo14Mar2023bhav.csv'
+2023-10-25 23:40:46,588 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:40:51,592 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo30Mar2023bhav.csv'
+2023-10-25 23:41:06,933 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:41:11,950 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo04Apr2023bhav.csv'
+2023-10-25 23:41:27,763 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:41:32,780 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo07Apr2023bhav.csv'
+2023-10-25 23:41:59,034 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:42:04,049 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo14Apr2023bhav.csv'
+2023-10-25 23:43:02,645 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:43:07,647 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo01May2023bhav.csv'
+2023-10-25 23:47:00,253 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:47:05,270 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo29Jun2023bhav.csv'
+2023-10-25 23:50:01,167 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:50:06,182 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo15Aug2023bhav.csv'
+2023-10-25 23:52:21,721 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:52:26,738 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo19Sep2023bhav.csv'
+2023-10-25 23:53:15,739 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:53:20,747 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo02Oct2023bhav.csv'
+2023-10-25 23:54:46,209 - Error while saving Bhav copy data: HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out.
+2023-10-25 23:54:51,220 - Error while processing the CSV file: [Errno 2] No such file or directory: 'C:\\Users\\anand\\OneDrive\\Documents\\BHAV COPY\\fo24Oct2023bhav.csv'
+2023-10-26 00:07:53,544 - Data updated in the database.
