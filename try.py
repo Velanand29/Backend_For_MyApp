@@ -19,6 +19,33 @@ def date_range(start_date, end_date):
         yield start_date
         start_date += delta
 
+# Function to download data for a specific date
+def download_data_for_date(target_date):
+    # Generate the file name based on the date and format
+    file_name = f"fo{target_date.strftime('%d%b%Y')}bhav.csv"
+    file_path = rf"C:\Users\anand\OneDrive\Documents\BHAV COPY\{file_name}"
+
+    # Call bhavcopy_fo_save to fetch data for the desired date
+    save_directory = rf"C:\Users\anand\OneDrive\Documents\BHAV COPY"
+    try:
+        bhavcopy_fo_save(target_date, save_directory)
+        print(f"Bhavcopy for {target_date} saved to {save_directory}")
+    except Exception as e:
+        print(f"An error occurred while saving Bhav copy data: {str(e)}")
+        logging.error(f"Error while saving Bhav copy data: {str(e)}")
+
+    # Wait for 5 seconds to ensure the file is downloaded
+    time.sleep(5)
+
+    try:
+        # Read the CSV file into a DataFrame
+        df = pd.read_csv(file_path)
+        return df
+    except Exception as e:
+        print(f"An error occurred while processing the CSV file: {str(e)}")
+        logging.error(f"Error while processing the CSV file: {str(e)}")
+        return None
+
 # Input for the date range
 while True:
     try:
@@ -50,29 +77,15 @@ dataframes = []
 # Process data for dates within the specified range
 for single_date in date_range(start_date, end_date):
     if is_weekday(single_date):
-        # Generate the file name based on the date and format
-        file_name = f"fo{single_date.strftime('%d%b%Y')}bhav.csv"
-        file_path = rf"C:\Users\anand\OneDrive\Documents\BHAV COPY\{file_name}"
-
-        # Call bhavcopy_fo_save to fetch data for the desired date
-        save_directory = rf"C:\Users\anand\OneDrive\Documents\BHAV COPY"
-        try:
-            bhavcopy_fo_save(single_date, save_directory)
-            print(f"Bhavcopy for {single_date} saved to {save_directory}")
-        except Exception as e:
-            print(f"An error occurred while saving Bhav copy data: {str(e)}")
-            logging.error(f"Error while saving Bhav copy data: {str(e)}")
-
-        # Wait for 5 seconds to ensure the file is downloaded
-        time.sleep(5)
-
-        try:
-            # Read the CSV file into a DataFrame
-            df = pd.read_csv(file_path)
+        df = download_data_for_date(single_date)
+        if df is not None:
             dataframes.append(df)
-        except Exception as e:
-            print(f"An error occurred while processing the CSV file: {str(e)}")
-            logging.error(f"Error while processing the CSV file: {str(e)}")
+
+# Check if start and end dates are the same
+if start_date == end_date and is_weekday(start_date):
+    df = download_data_for_date(start_date)
+    if df is not None:
+        dataframes.append(df)
 
 # Continue with your code to merge and update the data in the database
 
