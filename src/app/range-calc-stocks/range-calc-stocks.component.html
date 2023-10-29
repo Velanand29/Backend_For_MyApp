@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles can be added here */
+    </style>
+</head>
+
+<body class="p-4">
+    <h1 class="text-2xl mb-4">Instrument Data</h1>
+    <input type="text" id="filterInput" class="w-full px-3 py-2 mb-4 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Filter by instrument...">
+
+    <table class="w-full table-auto">
+        <thead>
+            <tr>
+                <th class="px-4 py-2">INSTRUMENT</th>
+                <th class="px-4 py-2">SYMBOL</th>
+                <th class="px-4 py-2">EXPIRY_DT</th>
+                <th class="px-4 py-2">STRIKE_PR</th>
+                <th class="px-4 py-2">OPTION_TYP</th>
+                <th class="px-4 py-2">OPEN</th>
+                <th class="px-4 py-2">HIGH</th>
+                <th class="px-4 py-2">LOW</th>
+                <th class="px-4 py-2">CLOSE</th>
+                <th class="px-4 py-2">SETTLE_PR</th>
+                <th class="px-4 py-2">CONTRACTS</th>
+                <th class="px-4 py-2">VAL_INLAKH</th>
+                <th class="px-4 py-2">OPEN_INT</th>
+                <th class="px-4 py-2">CHG_IN_OI</th>
+                <th class="px-4 py-2">TIMESTAMP</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Your data will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        // Sample data (replace with your own data)
+        const data = [
+            /* Insert your data as objects here, e.g.
+            {
+                INSTRUMENT: 'AAPL',
+                SYMBOL: 'AAPL',
+                EXPIRY_DT: '2023-12-31',
+                STRIKE_PR: 150,
+                OPTION_TYP: 'Call',
+                OPEN: 150.50,
+                HIGH: 155.25,
+                LOW: 149.75,
+                CLOSE: 152.00,
+                SETTLE_PR: 152.25,
+                CONTRACTS: 1000,
+                VAL_INLAKH: 5000,
+                OPEN_INT: 500,
+                CHG_IN_OI: 50,
+                TIMESTAMP: '2023-10-23 10:00:00'
+            },
+            */
+        ];
+
+        // Function to generate the table rows from the data
+        function generateTable(data) {
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                for (const key in item) {
+                    const cell = document.createElement('td');
+                    cell.textContent = item[key];
+                    row.appendChild(cell);
+                }
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Add an event listener to the filter input
+        document.getElementById('filterInput').addEventListener('input', function () {
+            const filterText = this.value.toLowerCase();
+            const filteredData = data.filter(item => {
+                return Object.values(item).some(value => value.toString().toLowerCase().includes(filterText));
+            });
+            generateTable(filteredData);
+        });
+
+        // Initial table generation
+        generateTable(data);
+    </script>
+</body>
+
+</html>
